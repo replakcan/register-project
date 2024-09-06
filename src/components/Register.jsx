@@ -17,7 +17,7 @@ const initialErrors = {
     password: false,
 }
 
-const errorMessages = {
+export const errorMessages = {
     ad: "Adınızı en az 3 karakter giriniz.",
     soyad: "Soyadınızı en az 3 karakter giriniz.",
     email: "Geçerli bir email adresi giriniz.",
