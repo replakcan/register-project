@@ -115,6 +115,7 @@ export default function Register() {
             value={formData.ad}
             onChange={handleChange}
             invalid={errors.ad}
+            data-cy="ad-input"
           />
           {errors.ad && <FormFeedback>{errorMessages.ad}</FormFeedback>}
         </FormGroup>
@@ -130,8 +131,9 @@ export default function Register() {
             value={formData.soyad}
             onChange={handleChange}
             invalid={errors.soyad}
+            data-cy="soyad-input"
           />
-        {errors.soyad && <FormFeedback>{errorMessages.soyad}</FormFeedback>}
+        {errors.soyad && <FormFeedback data-cy="error-message">{errorMessages.soyad}</FormFeedback>}
 
         </FormGroup>
         <FormGroup>
@@ -146,8 +148,9 @@ export default function Register() {
             value={formData.email}
             onChange={handleChange}
             invalid={errors.email}
+            data-cy="email-input"
           />
-            {errors.email && <FormFeedback>{errorMessages.email}</FormFeedback>}
+            {errors.email && <FormFeedback data-cy="error-message">{errorMessages.email}</FormFeedback>}
         </FormGroup>
         <FormGroup>
           <Label for="password">
@@ -161,10 +164,11 @@ export default function Register() {
             value={formData.password}
             onChange={handleChange}
             invalid={errors.password}
+            data-cy="password-input"
           />
-            {errors.password && <FormFeedback>{errorMessages.password}</FormFeedback>}
+            {errors.password && <FormFeedback data-cy="error-message">{errorMessages.password}</FormFeedback>}
         </FormGroup>
-        <Button disabled={!isValid}>
+        <Button disabled={!isValid} data-cy="submit-button">
           Kayıt Ol
         </Button>
       </Form>
