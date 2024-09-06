@@ -41,5 +41,15 @@ describe('Register Page', () => {
       //assert
       cy.contains(errorMessages.password)
     })
+
+    it("Button is disabled for unvalidated inputs.", () => {
+
+      //arrange
+      cy.visit("http://localhost:5173/");
+      //act
+      cy.get('[data-cy="password-input"]').type("1234")
+      //assert
+      cy.get('[data-cy="submit-button"]').should("be.disabled");
+    })
   })
 })
